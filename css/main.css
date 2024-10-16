@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+h1, h2 {
+		color: #fff;
+		font-weight: 800;
+		letter-spacing: 0.225em;/*em = размер шрифта*/
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase; /*Вывод заглавными буквами*/
+	}
+.menu li{
+  	display: inline; /*Горизонтальное отображение*/
+	  list-style: none;
+	  display: inline;
+  }
+
+  .menu {
+  	overflow: hidden; /*Отображение области внутри элемента*/
+  	list-style-type: none;  
+  	background-color: #1e252b; /*Цвет фона меню*/
+  	margin: 0px; /*Расстояние между блоками*/
+  	padding: 1em 0 1em; /*Расстояние от края блока до текста*/
+  	position: fixed;
+  	width: 100%;
+  	z-index: 9999;
+	text-align: center;
+  }
+
+  .menu a {
+  	text-decoration: none; /*Убирается подчёркивание ссылок*/ 
+  	text-align: center; /*Размещение текста по центру*/
+  	color: #f2f2f2; /*Цвет текста ссылок*/
+  	font-size: xx-large; /*Размер шрифта*/
+  	padding: 10%; /*Поля вокруг текста*/
+
+  }
+
+  .menu a:hover {
+  	/*Наведение на ссылку*/
+  	background-color: #ddd; /*Изменение цвета фона*/
+  	color: black; /*Изменение цвета текста*/
+  }
+
+  .menu a.active {
+  	/*Для активной ссылки*/
+	background-color: #0e1629; /*Изменение цвета фона*/
+  	color: white; /*Изменение цвета текста*/
+  }
+   .social_media img:hover {
+  	width: 2%;
+    opacity: .8;
+	}
+
+  #back {
+	position: relative;
+
+  }
+
+  #back::before {
+  	/*before - отображение изображения до текста*/
+  	position: absolute;
+  	top: 0;/*Расстояние от верхнего*/
+    left: 0; /*Левого*/
+    bottom: 0; /*Нижнего*/
+    right: 0; /*И правого края*/
+  	background: url(../image/backgroung_pict.jpg); /*Изображение на фоне*/
+  	opacity: .5; /*Затемнение*/
+  	content: ""; /*Содержимое*/
+  	z-index: -1; /*Размещение по z-оси элемента*/
+  }
+
+	#banner {
+		display: flex; /*Раcтягивание на всю ширину*/
+		flex-direction: column; /*Главная ось располагается вертикально и направлена сверху вниз.*/
+		justify-content: center;/*Флексы выравниваются по центру строки.*/
+		cursor: default;
+		height: 100vh;
+		min-height: 35em;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+
+	body {
+		color: #fff;
+		font-family: "Open Sans", Helvetica, sans-serif;
+		font-size: 15pt;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		line-height: 1.65em;
+		background-color: #1e252b;
+	}
+
+	#banner h2 {
+			transform: scale(1);/*исходный масштаб*/
+			transition: transform 0.5s ease, opacity 0.5s ease;
+			display: inline-block;
+			font-size: 1.75em;
+			opacity: 1;
+			padding: 0.35em 1em;
+			position: relative;
+			z-index: 1;
+		}
+
+		#banner h2:before, #banner h2:after {
+				transition: width 0.85s ease;
+				transition-delay: 0.25s;
+				background: #fff;
+				content: '';
+				display: block;
+				height: 2px;
+				position: absolute;
+				width: 100%;
+			}
+
+			#banner h2:before {
+				top: 0;
+				left: 0;
+			}
+
+			#banner h2:after {
+				bottom: 0;
+				right: 0;
+			}
+
+		#banner p {
+			letter-spacing: 0.225em;
+			text-transform: uppercase;
+		}
+
+			#banner p a {
+				color: inherit;
+			}
+			a {
+				text-decoration: none;
+			}
+
+#footer{
+	text-align: center;
+	padding: 2em 0 2em 0;
+}
+#footer .copyright{
+	padding: 0;
+	text-transform:uppercase;
+	font-size: 0.8em;
+	color: rgba(255,255,255,0.5);
+}
+
+* {
+	margin: 0;
+}
+#one, #two {
+	background-color: black;
+	text-align: center;
+	padding: 4em 0 2em 0; 
+}
+.about {
+	margin: 0;
+	background-color: #2b343d;
+	display: flex;
+	align-items: center;
+}
+.about .image {
+	order: 1;
+}
+.about .image img{
+border-radius: 0;
+width: 100%;
+
+}
+.about .content {
+	order: 2;
+	padding: 2em 4em 0.1em 4em;
+}
+.university {
+	margin:  0;
+	background-color: #273038;
+	display: flex;
+}
+.university .image{
+	order: 2;
+}
+.university .content{
+	order: 1;
+	padding: 2em 4em 0.1em 4em;
+	text-align: left;
+}
+.university .image img{
+	border-radius: 0;
+    width: 100%;
+}
+.arrow {
+      width: 60px;
+      height: 60px;
+      border-top: 10px solid #6E18C0;
+      border-right: 10px solid #6E18C0;
+      margin-right: 60px;
+  }    
+  .arrow-bottom {
+      transform: rotate(135deg);
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+
+       .contacts {
+      	background-color: #2b343d;
+      	text-align: center;
+      	padding: 15vh 0 5vh 0;
+      	min-height: 60vh;
+      }
+      
+   .submit {
+    background-color: #0e1629;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover{
+    opacity: .5;
+}
+textarea{
+    height: 30vh;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 2em 10px 10px;
+    border: 1px solid #273038;
+    background-color: #273038;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.photos {
+	text-decoration: none;
+	background-color: #2b343d;
+}
+
+.images{
+	padding: 4em 0 0 0;
+}
+
